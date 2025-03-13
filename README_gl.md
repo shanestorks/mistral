@@ -1,6 +1,14 @@
 Below is the list of steps I took to get it working on Great Lakes.
 
-1. First, load the appropriate modules for this code base (relies on CUDA 11.3):
+0. Clone this forked repo in your folder of choice:
+
+```
+cd path/to/where/you/want/to/clone
+https://github.com/shanestorks/mistral.git
+cd mistral
+```
+
+1. Load the appropriate modules for this code base (relies on CUDA 11.3):
 
 ```
 module load python3.11-anaconda/2024.02
