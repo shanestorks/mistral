@@ -4,7 +4,7 @@ Below is the list of steps I took to get it working on Great Lakes.
 
 ```
 cd path/to/where/you/want/to/clone
-https://github.com/shanestorks/mistral.git
+git clone https://github.com/shanestorks/mistral.git
 cd mistral
 ```
 
