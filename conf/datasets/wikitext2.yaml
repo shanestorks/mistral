@@ -2,7 +2,7 @@
 #   Configuration for WikiText-2 Dataset (https://huggingface.co/datasets/wikitext).
 ---
 dataset:
-    id: wikitext
+    id: Salesforce/wikitext
     name: wikitext-2-raw-v1
     validation_ratio: null
 
