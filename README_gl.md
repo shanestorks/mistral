@@ -46,3 +46,13 @@ CUDA_VISIBLE_DEVICES=0 python train.py --config conf/mistral-micro.yaml --nnodes
 ```
 
 *Note: in addition to the above environment fixes, I had to change "wikitext" in `conf/datasets/wikitext2.yaml` to "Salesforce/wikitext".*
+
+
+**After initial setup, do this each time to preapre the environment:**
+
+```
+module load python3.11-anaconda/2024.02
+module load cuda/11.3.0
+source activate mistral
+cd path/to/mistral
+```
