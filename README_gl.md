@@ -44,11 +44,12 @@ pip install -U datasets
 8. Run single-node single-GPU training as follows:
 
 ```
-CUDA_VISIBLE_DEVICES=0 python train.py --config conf/mistral-small.yaml --nnodes 1 --nproc_per_node 1 --training_arguments.fp16 true --training_arguments.per_device_train_batch_size 2 --run_id tutorial-gpt2-small
+CUDA_VISIBLE_DEVICES=0 python train.py --config conf/mistral-small.yaml --nnodes 1 --nproc_per_node 1 --training_arguments.fp16 true --training_arguments.per_device_train_batch_size 16 --training_arguments.per_device_eval_batch_size 32 --run_id tutorial-gpt2-small
 ```
 
 *Note: in addition to the above environment fixes, I had to change "wikitext" in `conf/datasets/wikitext2.yaml` to "Salesforce/wikitext".*
 
+*Another note: I upped the batch size in the above command to maximize the GPU memory. However, we may need to tune the learning rate later to ensure model convergence.*
 
 **After initial setup, do this each time to prepare the environment:**
 
