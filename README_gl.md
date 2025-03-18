@@ -37,14 +37,14 @@ pip install --upgrade mkl==2024.0.0
 pip install -U datasets
 ```
 
-6. Configure `conf/mistral-micro.yaml` by setting `artifacts.cache_dir` and `artifacts.run_dir` to your desired paths.
+6. Configure `conf/mistral-small.yaml` by setting `artifacts.cache_dir` and `artifacts.run_dir` to your desired paths.
 
 7. Log into weights and biases, or run `export DISABLE_WANDB=true`.
 
 8. Run single-node single-GPU training as follows:
 
 ```
-CUDA_VISIBLE_DEVICES=0 python train.py --config conf/mistral-micro.yaml --nnodes 1 --nproc_per_node 1 --training_arguments.fp16 true --training_arguments.per_device_train_batch_size 2 --run_id tutorial-gpt2-micro
+CUDA_VISIBLE_DEVICES=0 python train.py --config conf/mistral-small.yaml --nnodes 1 --nproc_per_node 1 --training_arguments.fp16 true --training_arguments.per_device_train_batch_size 2 --run_id tutorial-gpt2-small
 ```
 
 *Note: in addition to the above environment fixes, I had to change "wikitext" in `conf/datasets/wikitext2.yaml` to "Salesforce/wikitext".*
